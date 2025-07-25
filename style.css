@@ -464,6 +464,40 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+@media (max-width: 992px) {
+    .reservation-form i {
+        animation-name: move_right_mobile_1;
+    }
+}
+
+@keyframes move_right_mobile_1 {
+    from {
+        left: 17%;
+        bottom: 12%;
+    }
+    to {
+        left: 22%;
+        bottom: 12%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation-form i {
+        animation-name: move_right_mobile_2;
+    }
+}
+
+@keyframes move_right_mobile_2 {
+    from {
+        left: 15%;
+        bottom: 8%;
+    }
+    to {
+        left: 22%;
+        bottom: 8%;
+    }
+}
+
 /*================================================================================================================================================================================================*/
 
 /* Contact Section */
