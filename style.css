@@ -1,0 +1,603 @@
+:root {
+    --primary-color: #8B5FBF;
+    --primary-color-light: #ccb4e8;  
+    --secondary-color: #D4AF37;     
+    --accent-color: #E67E22;             
+    --light-color: #F8F9FA;                                      
+    --white-color: #FFFFFF;                      
+    --font-main: 'Playfair Display', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title {
+    font-family: var(--font-main);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 55px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Navigation */
+.navbar-brand {
+    font-family: var(--font-main);
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.dropdown-item{
+    transition: all .3s linear;
+}
+
+.dropdown-item:hover{
+    background-color: var(--primary-color);
+}
+
+.btn-reservation {
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+
+}
+
+.btn-reservation:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Home Section */
+.home-section {
+    height: 100vh;
+    min-height: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/bg-restaurant-photo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.home-section h1 {
+    font-size: 4.5rem;
+}
+
+.home-section p {
+    font-size: 1.5rem;
+}
+
+.btn-outline-light{
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover{
+    transform: scale(1.05);
+}
+
+.home-section .arrow_down
+{
+    animation: move_down 0.7s ease-in-out infinite;
+    position: absolute;
+    left: 50%;
+}
+
+@keyframes move_down 
+{
+  from 
+  {
+    position: absolute;
+    top: 75%;
+  }
+
+  to 
+  {
+    position: absolute;
+    top: 85%;
+  }
+}
+
+/*================================================================================================================================================================================================*/
+
+/* About Section */
+.awards-section{
+    margin-top: 120px;
+}
+
+.award-card {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.award-card img{
+    height: 400px; 
+    object-fit: cover;
+}
+
+.award-card:hover {
+    transform: scale(1.02) translateY(-5px);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Chefs Section */
+
+/* Custom Carousel Control Positioning */
+#chefCarousel{
+    position: relative;
+    padding: 0 50px;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transition: transform 0.4s ease;
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    transform: scale(1.1);
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active{
+    transform: scale(0.9);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.chef-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.chef-card a{
+    width: 35px;
+    height: 35px;
+}
+
+.chef-card:hover {
+   transform: scale(1.02) translateY(-12px);
+}
+
+.chef-card .card-img-top {
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.chef-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.chef-card:hover .member-social {
+    opacity: 1 !important;
+}
+
+.bg-dark-transparent {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+.bg-dark-transparent:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.2);
+}
+
+.chef-name {
+    color: var(--secondary-color);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 60%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Menu Section*/
+
+/* Nav Tabs */
+
+.nav-pills .nav-item .nav-link{
+    transition: all 0.3s ease-in;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+.nav-pills .nav-item .nav-link img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.nav-pills .nav-item .nav-link:not(.active):hover {
+    background-color: var(--primary-color-light);
+}
+
+.dish-card,
+.sandwich-card,
+.appetizer-card,
+.soup-card,
+.salad-card {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dish-card .card-img-top,
+.sandwich-card .card-img-top,
+.appetizer-card .card-img-top,
+.soup-card .card-img-top,
+.salad-card .card-img-top{
+    height: 250px;
+    object-fit: cover;
+}
+
+.dish-card .btn-warning:hover,
+.sandwich-card .btn-warning:hover,
+.appetizer-card .btn-warning:hover,
+.soup-card .btn-warning:hover,
+.salad-card .btn-warning:hover{
+    color: var(--accent-color);
+    background-color: white;
+    border: 1px solid var(--accent-color);
+}
+
+.dish-card:hover,
+.sandwich-card:hover,
+.appetizer-card:hover,
+.soup-card:hover,
+.salad-card:hover {
+    transform: scale(1.02) translateY(-12px);
+}
+
+                            /*=======================================================================================================================================================================================================================*/
+
+/*Carousels*/                                
+
+#desserts .container div h2 img,
+#soft-drinks .container div h2 img,
+#milkshakes .container div h2 img,
+#iced-coffees .container div h2 img,
+#hot-drinks .container div h2 img,
+#waters .container div h2 img
+{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+/* Juice, Hot Drinks, MilkShake Carousel */
+#dessertCarousel,
+#juiceCarousel,
+#milkshakeCarousel,
+#icedCoffeeCarousel,
+#hotDrinksCarousel {
+    position: relative;
+    padding: 0 50px;
+}
+
+.dessert-card,
+.juice-card,
+.shake-card,
+.iced-coffee-card,
+.hot-drink-card,
+.water-card{
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dessert-card .card-img-top,
+.juice-card .card-img-top,
+.shake-card .card-img-top,
+.iced-coffee-card .card-img-top,
+.hot-drink-card .card-img-top{
+    height: 350px;
+    object-fit: cover;
+}
+
+.dessert-card .btn-warning:hover,
+.juice-card .btn-warning:hover,
+.shake-card .btn-warning:hover,
+.iced-coffee-card .btn-warning:hover,
+.hot-drink-card .btn-warning:hover,
+.water-card .btn-warning:hover{
+    color: var(--accent-color);
+    background-color: white;
+    border: 1px solid var(--accent-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    #dessertCarousel,
+    #juiceCarousel,
+    #milkshakeCarousel,
+    #icedCoffeeCarousel,
+    #hotDrinksCarousel {
+        padding: 0 40px;
+    }
+    
+    .carousel-control-prev {
+        left: -30px;
+    }
+    
+    .carousel-control-next {
+        right: -30px;
+    }
+} 
+
+@media (max-width: 768px) {
+    #dessertCarousel,
+    #juiceCarousel,
+    #milkshakeCarousel,
+    #icedCoffeeCarousel,
+    #hotDrinksCarousel {
+        padding: 0 30px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: -15px;
+    }
+    
+    .carousel-control-next {
+        right: -15px;
+    }
+}                           
+
+/*================================================================================================================================================================================================*/
+
+/* Gallery Section */
+.gallery-img {
+    height: 300px;
+    width: 100%;
+    margin: 10px auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02) translateY(-12px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Reservation Section */
+.reservation-form {
+    background-color: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.reservation-form textarea{
+    resize: none;
+}
+
+.reservation-form i{
+    position: absolute;
+    left: 25%;
+    bottom: 11.5%;
+    animation: move_right 0.5s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes move_right
+{
+  from 
+  {
+    position: absolute;
+    left: 25%;
+    bottom: 11.5%;
+  }
+
+  to 
+  {
+    position: absolute;
+    left: 32%;
+    bottom: 11.5%;
+  }
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Contact Section */
+.contact-info i {
+    color: var(--primary-color);
+}
+
+.contact-info .directions .fa-chevron-right{
+    font-size: 20px;
+    position: absolute;
+    top: 28%;
+    left: 0;
+    animation-name: move-to-directions;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+}
+
+.contact-info .btn-outline-dark{
+    margin-left: 60px;
+}
+
+@keyframes move-to-directions 
+{
+    0%{
+        position: absolute;
+        left: 0;
+    }
+
+    100%{
+        position: absolute;
+        left: 40px;
+    }
+
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Footer */
+.footer-brand {
+    font-family: var(--font-main);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--white-color);
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+}
+
+.footer h5 {
+    color: var(--secondary-color);
+    font-family: var(--font-main);
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Scroll to Top */
+#scrollTopBtn {
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    border: none;
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover{
+     background-color: var(--accent-color);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Scrollbar */
+
+::-webkit-scrollbar
+{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: var(--primary-color-light);
+}
+
+/*================================================================================================================================================================================================*/
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .btn-reservation {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
