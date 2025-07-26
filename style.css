@@ -469,70 +469,10 @@ h1, h2, h3, h4, h5, h6,
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
 }
 
 .reservation-form textarea{
     resize: none;
-}
-
-.reservation-form i{
-    position: absolute;
-    left: 25%;
-    bottom: 11.5%;
-    animation: move_right 0.5s ease-in-out infinite;
-    overflow: hidden;
-}
-
-@keyframes move_right
-{
-  from 
-  {
-    position: absolute;
-    left: 25%;
-    bottom: 11.5%;
-  }
-
-  to 
-  {
-    position: absolute;
-    left: 32%;
-    bottom: 11.5%;
-  }
-}
-
-@media (max-width: 992px) {
-    .reservation-form i {
-        animation-name: move_right_mobile_1;
-    }
-}
-
-@keyframes move_right_mobile_1 {
-    from {
-        left: 17%;
-        bottom: 12%;
-    }
-    to {
-        left: 22%;
-        bottom: 12%;
-    }
-}
-
-@media (max-width: 768px) {
-    .reservation-form i {
-        animation-name: move_right_mobile_2;
-    }
-}
-
-@keyframes move_right_mobile_2 {
-    from {
-        left: 15%;
-        bottom: 8%;
-    }
-    to {
-        left: 22%;
-        bottom: 8%;
-    }
 }
 
 /*================================================================================================================================================================================================*/
