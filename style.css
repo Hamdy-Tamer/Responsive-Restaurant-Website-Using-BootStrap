@@ -69,6 +69,12 @@ h1, h2, h3, h4, h5, h6,
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
 /*================================================================================================================================================================================================*/
 
 /* Home Section */
@@ -118,6 +124,37 @@ h1, h2, h3, h4, h5, h6,
     position: absolute;
     top: 85%;
   }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .home-section h1 {
+        font-size: 3.5rem;
+    }
+    
+    .home-section p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-section h1{
+        font-size: 2.2rem;
+    }
+
+    .home-section p{
+        font-size: 1rem;
+    }
+
+    .home-section .btn-outline-light{
+        margin: 15px 0 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-section .arrow_down{
+        font-size: 10px;
+    }
 }
 
 /*================================================================================================================================================================================================*/
@@ -602,36 +639,4 @@ h1, h2, h3, h4, h5, h6,
 ::-webkit-scrollbar-thumb:hover
 {
     background-color: var(--primary-color-light);
-}
-
-/*================================================================================================================================================================================================*/
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .hero-section h1 {
-        font-size: 3.5rem;
-    }
-    
-    .hero-section p {
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-section p {
-        font-size: 1.1rem;
-    }
-    
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
-    
-    .btn-reservation {
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }
 }
