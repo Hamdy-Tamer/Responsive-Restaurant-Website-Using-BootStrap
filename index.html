@@ -123,7 +123,7 @@
             <!-- Awards Section -->
             <div class="row g-4 awards-section">
                 <!-- Michelin Star Plaque -->
-                <div class="col-md-4">
+                <div class="col-md-4 mx-auto">
                     <div class="award-card h-100">
                         <img src="images/Michelin Star Plaque.jpg" class="img-fluid award-img" alt="Michelin Star Plaque">
                         <div class="award-caption p-3">
@@ -134,7 +134,7 @@
                 </div>
     
                 <!-- Chef with Award -->
-                <div class="col-md-4">
+                <div class="col-md-4 mx-auto">
                     <div class="award-card h-100">
                         <img src="images/Chef receiving Michelin star.jpg" class="img-fluid award-img" alt="Chef receiving Michelin star">
                         <div class="award-caption p-3">
@@ -145,7 +145,7 @@
                 </div>
     
                 <!-- Signature Dish -->
-                <div class="col-md-4">
+                <div class="col-md-4 mx-auto">
                     <div class="award-card h-100">
                         <img src="images/Signature Michelin-starred dish.jpg" class="img-fluid award-img" alt="Signature Michelin-starred dish">
                         <div class="award-caption p-3">
@@ -2427,25 +2427,30 @@
             
             <div class="row g-3">
                 <div class="col-md-4 col-6">
-                    <img src="images/Signature Michelin-starred dish.jpg" class="img-fluid gallery-img rounded-2" alt="Signature Michelin-starred dish">
+                    <img src="images/Signature Michelin-starred dish.jpg" class="img-fluid gallery-img rounded-2" alt="Signature Michelin-starred dish" onclick="openLightbox(this.src)">
                 </div>
                 <div class="col-md-4 col-6">
-                    <img src="images/Restaurant_indoors.jpg" class="img-fluid gallery-img rounded-2" alt="Restaurant Image Indoors">
+                    <img src="images/Restaurant_indoors.jpg" class="img-fluid gallery-img rounded-2" alt="Restaurant Image Indoors" onclick="openLightbox(this.src)">
                 </div>
                 <div class="col-md-4 col-6">
-                    <img src="images/drinks.jpg" class="img-fluid gallery-img rounded-2" alt="Dish 3">
+                    <img src="images/drinks.jpg" class="img-fluid gallery-img rounded-2" alt="Drinks" onclick="openLightbox(this.src)">
                 </div>
                 <div class="col-md-4 col-6">
-                    <img src="images/chefs-in-kitchen.png" class="img-fluid gallery-img rounded-2" alt="Dish 4">
+                    <img src="images/chefs-in-kitchen.png" class="img-fluid gallery-img rounded-2" alt="Dish 4" onclick="openLightbox(this.src)">
                 </div>
                 <div class="col-md-4 col-6">
-                    <img src="images/restaurant table dishes.jpg" class="img-fluid gallery-img rounded-2" alt="Restaurant Table Dish">
+                    <img src="images/restaurant table dishes.jpg" class="img-fluid gallery-img rounded-2" alt="Restaurant Table Dish" onclick="openLightbox(this.src)">
                 </div>
                 <div class="col-md-4 col-6">
-                    <img src="images/multiple-desserts.png" class="img-fluid gallery-img rounded-2" alt="Multiple Types of Desserts">
+                    <img src="images/multiple-desserts.png" class="img-fluid gallery-img rounded-2" alt="Multiple Types of Desserts" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </div>
+        <div id="imageLightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close-btn" onclick="closeLightbox(event)"><i class="fa-solid fa-xmark"></i></span>
+            <img id="lightboxImage" src="" alt="Expanded Image">
+        </div>
+
     </section>
     <!-- Gallery Section Ends -->
 
@@ -2463,7 +2468,7 @@
             
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form class="reservation-form">
+                    <form orm class="reservation-form">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input type="text" class="form-control" placeholder="Full Name" required>
